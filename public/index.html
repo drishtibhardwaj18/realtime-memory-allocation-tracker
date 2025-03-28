@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Memory Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="client.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>System Memory Tracker</h1>
+
+      <div class="system-stats">
+        <div class="stat-card">
+          <h2>Total Memory</h2>
+          <div class="value" id="total">0</div>
+          <span>GB</span>
+        </div>
+        <div class="stat-card">
+          <h2>Used Memory</h2>
+          <div class="value" id="used">0</div>
+          <span>GB</span>
+        </div>
+        <div class="stat-card">
+          <h2>Free Memory</h2>
+          <div class="value" id="free">0</div>
+          <span>GB</span>
+        </div>
+      </div>
+
+      <h2>Top Applications</h2>
+      <div class="app-list" id="appList">
+        <!-- Apps and their processes will be dynamically added here -->
+      </div>
+
+      <div class="timestamp" id="timestamp"></div>
+    </div>
+  </body>
+</html>
